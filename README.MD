@@ -23,11 +23,12 @@ Este repositorio contiene un archivo Dockerfile diseñado para crear una imagen 
 Este Dockerfile proporciona una base sólida para ejecutar Jenkins junto con Ansible en un entorno de contenedorizado, lo que facilita la automatización de tareas de CI/CD y la administración de infraestructura.
 
 
-## Descripción
-
-El archivo `docker-compose.yml` proporciona una configuración para orquestar y ejecutar un contenedor de Jenkins utilizando Docker Compose. Este entorno está diseñado para trabajar junto con el Dockerfile anterior que crea una imagen personalizada de Jenkins con Ansible.
 
 ## Docker-compose
+
+### Descripción
+
+El archivo `docker-compose.yml` proporciona una configuración para orquestar y ejecutar un contenedor de Jenkins utilizando Docker Compose. Este entorno está diseñado para trabajar junto con el Dockerfile anterior que crea una imagen personalizada de Jenkins con Ansible.
 
 - **Versión de Docker Compose**: Se utiliza la versión 3 de Docker Compose para definir la estructura del servicio.
 - **Servicio de Jenkins**:
