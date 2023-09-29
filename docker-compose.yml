@@ -12,23 +12,3 @@ services:
     networks:
       - jenkins-net
 
-  remote_host:
-    container_name: remote-host
-    image: remote-host
-    build:
-      context: ./ubuntu
-    networks:
-      - jenkins-net
-
-  db_host:
-    container_name: db
-    image: mysql:5.7
-    environment:
-      - "MYSQL_ROOT_PASSWORD=1234"
-    volumes:
-      - $PWD/db_date:/var/lib/mysql
-    networks:
-      - jenkins-net
-
-networks:
-  jenkins-net:
