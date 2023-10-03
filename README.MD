@@ -40,7 +40,7 @@ El archivo `docker-compose.yml` proporciona una configuración para orquestar y 
   - `jenkins-net`: Define una red personalizada llamada "jenkins-net" que se utiliza para conectar los contenedores de Jenkins y otros servicios si es necesario.
 
 
-## Como correr el contenedor
+## Como correr el contenedor.
 
 Para tener el contenedor en funcionamiento será necesario el uso de varios comandos entre ellos son:
 
