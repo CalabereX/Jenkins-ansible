@@ -50,4 +50,6 @@ Para tener el contenedor en funcionamiento será necesario el uso de varios coma
 
 3. **Iniciar el contenedor**: para ejecutarlo usaremos `docker-compose up -d` esto iniciará el contenedor de un archivo de configuración `docker-compose.yml`, pero con la condición que seguirá ejecutándose en segundo plano `-d`. Para más información al respecto: https://docs.docker.com/engine/reference/commandline/compose_up/
 
+
 4. **Comprobar la instalación de Ansible**: ya tenemos el contenedor en funcionamiento, faltaría comprobar si el ansible está instalado en el contenedor. Para ello usaremos `docker exec -ti jenkins` y ejecutar el comando ansible una vez dentro del contenedor.
+![alt text](https://i.imgur.com/PtzQFxy.png)
