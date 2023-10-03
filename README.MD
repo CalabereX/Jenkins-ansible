@@ -4,7 +4,7 @@
 
 ### Descripción
 
-Este repositorio contiene un archivo Dockerfile diseñado para crear una imagen de contenedor optimizada para ejecutar Jenkins junto con Ansible. La imagen se basa en la imagen oficial de Jenkins y se realizan varias configuraciones clave para garantizar un entorno funcional y seguro.
+Este repositorio contiene un archivo Dockerfile diseñado para crear una imagen para ejecutar Jenkins junto con Ansible de forma simultanea. La imagen se basa en la imagen oficial de Jenkins `jenkins/jenkins` y se realizan varias configuraciones clave para garantizar un entorno funcional y seguro.
 
 ### Pasos Clave
 
@@ -20,15 +20,12 @@ Este repositorio contiene un archivo Dockerfile diseñado para crear una imagen 
 
 6. **Seguridad del Contenedor**: Finalmente, volvemos a cambiar al usuario "jenkins" para evitar que Jenkins se ejecute como usuario "root" dentro del contenedor, lo cual es una práctica de seguridad recomendada.
 
-Este Dockerfile proporciona una base sólida para ejecutar Jenkins junto con Ansible en un entorno de contenedorizado, lo que facilita la automatización de tareas de CI/CD y la administración de infraestructura.
-
-
 
 ## Docker-compose
 
 ### Descripción
 
-El archivo `docker-compose.yml` proporciona una configuración para orquestar y ejecutar un contenedor de Jenkins utilizando Docker Compose. Este entorno está diseñado para trabajar junto con el Dockerfile anterior que crea una imagen personalizada de Jenkins con Ansible.
+El archivo `docker-compose.yml` proporciona una configuración para orquestar y ejecutar un contenedor de Jenkins. Este entorno está diseñado para trabajar junto con el Dockerfile anterior que crea una imagen personalizada de Jenkins con Ansible.
 
 - **Versión de Docker Compose**: Se utiliza la versión 3 de Docker Compose para definir la estructura del servicio.
 - **Servicio de Jenkins**:
@@ -42,5 +39,15 @@ El archivo `docker-compose.yml` proporciona una configuración para orquestar y 
 - **Redes**:
   - `jenkins-net`: Define una red personalizada llamada "jenkins-net" que se utiliza para conectar los contenedores de Jenkins y otros servicios si es necesario.
 
-Este archivo de Docker Compose facilita la ejecución y gestión del entorno de Jenkins junto con Ansible en contenedores, lo que es útil para automatizar flujos de trabajo de CI/CD y administración de infraestructura.
 
+## Como correr el contenedor
+
+Para tener el contenedor en funcionamiento será necesario el uso de varios comandos entre ellos son:
+
+1. **Arrancar docker**: Miraremos si docker esta en funcionamiento para ello será necesario revisar su estado. Esto lo podremos comprobar con `sudo service docker status` (comando `sudo service docker start` para arrancar docker).
+
+2. **Construir nuestra imagen**: para construir nuestra imagen `docker-compose build`. Para más información al respecto: https://docs.docker.com/engine/reference/commandline/compose_build/
+
+3. **Iniciar el contenedor**: para ejecutarlo usaremos `docker-compose up -d` esto iniciará el contenedor de un archivo de configuración `docker-compose.yml`, pero con la condición que seguirá ejecutándose en segundo plano `-d`. Para más información al respecto: https://docs.docker.com/engine/reference/commandline/compose_up/
+
+4. **Comprobar la instalación de Ansible**: ya tenemos el contenedor en funcionamiento, faltaría comprobar si el ansible está instalado en el contenedor. Para ello usaremos `docker exec -ti ansible` y ejecutar el comando ansible una vez dentro del contenedor.
