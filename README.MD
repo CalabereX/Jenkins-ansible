@@ -52,4 +52,4 @@ Para tener el contenedor en funcionamiento será necesario el uso de varios coma
 
 
 4. **Comprobar la instalación de Ansible**: ya tenemos el contenedor en funcionamiento, faltaría comprobar si el ansible está instalado en el contenedor. Para ello usaremos `docker exec -ti jenkins` y ejecutar el comando ansible una vez dentro del contenedor.
-![alt text](https://i.imgur.com/PtzQFxy.png)
+![alt text](https://i.imgur.com/PwyT1eM.png)
