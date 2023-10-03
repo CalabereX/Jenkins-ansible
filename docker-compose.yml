@@ -13,5 +13,5 @@ services:
       - jenkins-net
 
 networks:
-jenkins-net:
+  jenkins-net:
 
