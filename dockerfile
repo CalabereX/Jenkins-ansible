@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip  # Instalamos pip
 
 # Agregamos el repositorio de Ansible manualmente
-RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" >> /etc/apt/sources.list.d/ansible.list \
+RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main" \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
 # Actualizamos nuevamente el sistema e instalamos Ansible
