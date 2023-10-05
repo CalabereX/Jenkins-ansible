@@ -55,4 +55,4 @@ Para tener el contenedor en funcionamiento será necesario el uso de varios coma
 ![alt text](https://i.imgur.com/PwyT1eM.png)
 
 Aquí una pequeña prueba de conexión.
-![alt text](https:///i.imgur.com/PvB2W8B.png)
+![alt text](https://i.imgur.com/PvB2W8B.png)
